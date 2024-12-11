@@ -24,7 +24,7 @@ export default function FancyCards() {
         </View>
       </ScrollView>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

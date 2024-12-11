@@ -1,32 +1,32 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Linking, Image } from 'react-native';
-const text ='Skilled in programming languages C++, Java and Python. Proficient in DSA(C++) Experienced in web development using HTML, CSS, JavaScript, Nodejs,  Reactjs and database management and Experienced in working with databases including Firebase, Mysql and MongoDB. and Believe in Team work.❤️'
+const textcontent ='Skilled in programming languages C++, Java and Python. Proficient in DSA(C++) Experienced in web development using HTML, CSS, JavaScript, Nodejs,  Reactjs and database management and Experienced in working with databases including Firebase, Mysql and MongoDB. and Believe in Team work.'
 const ActionCard = () => {
   const handleFollowMe = () => {
     const linkedinUrl = 'https://www.linkedin.com/in/rahulm4/'; 
     Linking.openURL(linkedinUrl).catch((err) =>
       console.error("Couldn't load URL", err)
-    );
-  };
+    )
+  }
 
   const handleExplore = () => {
     const portfolioUrl = 'https://rahulmahto-myportfolio.vercel.app/';
     Linking.openURL(portfolioUrl).catch((err) =>
       console.error("Couldn't load URL", err)
-    );
-  };
+    )
+  }
 
   return (
     <View style={styles.card}>
       {/* Profile Section */}
       <View style={styles.profileContainer}>
         <Image
-          source={{ uri: 'https://raw.githubusercontent.com/RahulM4/myportfolio/refs/heads/main/src/assets/me.png' }} // Replace with your profile image URL
+          source={{ uri: 'https://raw.githubusercontent.com/RahulM4/myportfolio/refs/heads/main/src/assets/me.png' }} 
           style={styles.profileImage}
         />
         <View>
-          <Text style={styles.name}>Rahul Mahto</Text> {/* Replace with the name */}
-          <Text style={styles.role}>Software Engineer</Text> {/* Role */}
+          <Text style={styles.name}>Rahul Mahto</Text> 
+          <Text style={styles.role}>Software Engineer</Text> 
         </View>
       </View>
 
@@ -34,7 +34,7 @@ const ActionCard = () => {
       <Text style={styles.subtitle}>
         Follow me for more updates or explore my portfolio.
       </Text>
-      <Text style={{color:'#9AA6B2'}} >{text}</Text>
+      <Text style={{color:'#9AA6B2'}} >{textcontent}</Text>
 
       {/* Buttons */}
       <View style={styles.buttonContainer}>

@@ -1,25 +1,19 @@
 import React from 'react';
 import {ScrollView, SafeAreaView} from 'react-native';
-import FlatCards from './components/FlatCards';
-import ElevatedCards from './components/ElevatedCards';
-import FancyCards from './components/FancyCards';
-import ActionCards from './components/ActionCards';
-import ContactList from './components/ContactList';
+import Tutorial from './components/Tutorial';
+import PasswordGenerator from './PasswordGeneratorApp/PasswordGeneraror';
+import BgColorChanger from './bgColorChanger/BgColorChanger';
+
 
 const App = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        {/* FlatCards */}
-       <FlatCards/>
-        {/* Elevated Cards */}
-        <ElevatedCards/>
-        {/* Fancy Cards */}
-        <FancyCards/>
-        {/* Action Cards */}
-        <ActionCards/>
-        <ActionCards/>
-        <ContactList/>
+      {/* Tutorial App */}
+      <Tutorial/>
+      {/* Password Generator App */}
+      <PasswordGenerator/>
+      <BgColorChanger/>
       </ScrollView>
     </SafeAreaView>
   );

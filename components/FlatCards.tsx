@@ -70,4 +70,4 @@ const styles = StyleSheet.create({
     color: 'f3f3f3',
     fontFamily: 'cursive',
   },
-});
+})
