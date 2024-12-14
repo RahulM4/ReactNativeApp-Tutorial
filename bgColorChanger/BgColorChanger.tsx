@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet, Dimensions, Text } from 'react-native';
+
+const {width} = Dimensions.get('window')
 
 const BgColorChanger = () => {
   const [bgColor, setBgColor] = useState('#c1c1c1');
@@ -17,23 +19,33 @@ const BgColorChanger = () => {
   };
 
   return (
+    <View>
+      <Text style = {styles.headingText}>Background Changer</Text>
     
     <View style={[styles.container, { backgroundColor: bgColor }]}>
       <Button title="bg changer" onPress={generateRandomColor} />
+    </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  headingText: {
+    fontSize: 16,
+    fontWeight: '500',
+    paddingHorizontal: 4,
+    margin: 4,
+  },
   container: {
-    width: 400,
+    width: width*0.95,
     height: 400,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 15,
     borderTopLeftRadius: 30,
-    borderBottomRightRadius: 30
+    borderBottomRightRadius: 30,
+    paddingBottom: 30,
+    margin: 10
   },
   
 });

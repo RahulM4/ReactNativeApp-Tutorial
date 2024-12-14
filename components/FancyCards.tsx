@@ -1,6 +1,8 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View, Dimensions } from 'react-native';
 import React from 'react';
 import { turistPlace } from './turistPlace';
+
+const {width} = Dimensions.get('window')
 
 export default function FancyCards() {
   return (
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   }
   ,
   container: {
-    width: 360,
+    width: width*0.85,
     height: 300,
     margin: 8,
     elevation: 10,
@@ -51,7 +53,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25, 
     shadowRadius: 3.84, 
     backgroundColor: '#fff', 
-    borderRadius: 10 
+    borderTopLeftRadius: 30,
+    borderBottomRightRadius: 30
   },
   imageCard: {
     width: '100%',
@@ -62,12 +65,12 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
-    borderTopLeftRadius: 15
+    borderTopLeftRadius: 30
   },
   contentCard: {
     padding: 10,
     backgroundColor: 'fff',
-    borderBottomRightRadius: 15
+    //borderBottomRightRadius: 30
   },
   name: {
     fontSize: 18,

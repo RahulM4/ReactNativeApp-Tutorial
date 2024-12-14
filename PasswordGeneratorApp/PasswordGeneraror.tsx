@@ -1,8 +1,10 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import * as Yup from 'yup'
 import { Formik } from 'formik';
+
+const {width} = Dimensions.get('window')
 
 const PasswordSchema = Yup.object().shape({
   passwordLength: Yup.number()
@@ -65,10 +67,12 @@ export default function PasswordGenerator() {
   }
 
   return (
+    <View >
+       <Text style={styles.headingText}>Password Generator</Text>
     <ScrollView keyboardShouldPersistTaps="handled">
       <SafeAreaView style={styles.appContainer}>
         <View style={styles.formContainer}>
-          <Text style={styles.title}>Password Generator</Text>
+         
           <Formik
             initialValues={{ passwordLength: '' }}
             validationSchema={PasswordSchema}
@@ -174,12 +178,23 @@ export default function PasswordGenerator() {
         ) : null}
       </SafeAreaView>
     </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  headingText: {
+    fontSize: 16,
+    fontWeight: '500',
+    paddingHorizontal: 4,
+    margin: 4,
+  },
   appContainer: {
-    flex: 1,
+    width: width*0.95,
+    backgroundColor: '#c1c1c1',
+    flex:1,
+    margin: 10,
+    paddingBottom: 10,
   },
   formContainer: {
     margin: 8,
@@ -256,7 +271,7 @@ const styles = StyleSheet.create({
   },
   card: {
     padding: 12,
-    borderRadius: 6,
+    borderRadius: 20,
     marginHorizontal: 12,
   },
   cardElevated: {
@@ -279,6 +294,6 @@ const styles = StyleSheet.create({
     fontFamily:'sans-serif',
     backgroundColor:'#B4B4B4',
     padding: 10,
-    borderRadius: 20
+    borderRadius: 30
   },
 });

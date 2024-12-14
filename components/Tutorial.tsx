@@ -10,14 +10,17 @@ export default function Tutorial() {
   return (
     <View>
         {/* FlatCards */}
-        <FlatCards/>
+        <FlatCards/>     
+           
         {/* Elevated Cards */}
         <ElevatedCards/>
         {/* Fancy Cards */}
         <FancyCards/>
         {/* Action Cards */}
         <ActionCards/>
-        {/* <ActionCards/> */}
+        <ActionCards/>
+
+        {/* <Contact list/> */}
         <ContactList/>
     </View>
   )

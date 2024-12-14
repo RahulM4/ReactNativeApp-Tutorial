@@ -13,6 +13,7 @@ const App = () => {
       <Tutorial/>
       {/* Password Generator App */}
       <PasswordGenerator/>
+      {/* Background Changer */}
       <BgColorChanger/>
       </ScrollView>
     </SafeAreaView>

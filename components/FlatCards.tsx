@@ -1,6 +1,8 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
+
+
 export default function FlatCards() {
   return (
     <View>
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     padding: 4,
+    
   },
   card: {
     flex: 1,

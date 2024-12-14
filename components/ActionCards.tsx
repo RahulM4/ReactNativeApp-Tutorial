@@ -1,5 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Linking, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Linking, Image,Dimensions } from 'react-native';
+
+
+const { width } = Dimensions.get('window');
+
 const textcontent ='Skilled in programming languages C++, Java and Python. Proficient in DSA(C++) Experienced in web development using HTML, CSS, JavaScript, Nodejs,  Reactjs and database management and Experienced in working with databases including Firebase, Mysql and MongoDB. and Believe in Team work.'
 const ActionCard = () => {
   const handleFollowMe = () => {
@@ -17,6 +21,9 @@ const ActionCard = () => {
   }
 
   return (
+    <View>
+      <Text style={styles.headingText}>Action Cards</Text>
+    
     <View style={styles.card}>
       {/* Profile Section */}
       <View style={styles.profileContainer}>
@@ -46,22 +53,27 @@ const ActionCard = () => {
         </TouchableOpacity>
       </View>
     </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  headingText: {
+    fontSize: 16,
+    fontWeight: '500',
+    paddingHorizontal: 4,
+    margin: 4,
+  },
   card: {
-    width: 400,
+    width: width * 0.95,
     padding: 20,
     margin: 8,
     backgroundColor: '#fff',
     borderTopLeftRadius: 30,
     borderBottomRightRadius: 30,
-    elevation: 10, // Android shadow
-    shadowColor: '#000', // iOS shadow
-    shadowOffset: { width: 0, height: 2 }, // iOS shadow offset
-    shadowOpacity: 0.25, // iOS shadow opacity
-    shadowRadius: 3.84, // iOS shadow radius
+    elevation: 10, 
+    shadowColor: '#000', 
+    
   },
   profileContainer: {
     flexDirection: 'row',
