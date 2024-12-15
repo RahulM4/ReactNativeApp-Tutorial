@@ -2,12 +2,14 @@ import React from 'react';
 import {ScrollView, SafeAreaView} from 'react-native';
 import Tutorial from './components/Tutorial';
 import PasswordGenerator from './PasswordGeneratorApp/PasswordGeneraror';
-import BgColorChanger from './bgColorChanger/BgColorChanger';
+import BgColorChanger from './BgColorChanger/BgColorChanger';
 import TicTacToe from './TicTacToe/TicTacToe';
+
 
 
 const App = () => {
   return (
+ 
     <SafeAreaView>
       <ScrollView>
       {/* Tutorial App */}
@@ -18,8 +20,11 @@ const App = () => {
       <BgColorChanger/>
       {/* Tic Tac Toe game */}
       <TicTacToe/>
+      {/* Music Player */}
+     
       </ScrollView>
     </SafeAreaView>
+  
   );
 };
 

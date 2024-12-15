@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     borderWidth: 4,
     borderColor: '#BDC3C7',
+    borderRadius: 30
   },
   cell: {
     width: '33.33%',
